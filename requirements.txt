@@ -1,0 +1,5 @@
+typer[all]
+yt-dlp
+ffmpeg-python
+openai
+tiktoken

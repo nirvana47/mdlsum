@@ -1,4 +1,4 @@
-### Medial Downloader & Summarizer (M-DL-SUM)
+### Media Downloader & Summarizer (M-DL-SUM)
 
 `__init__.py`: An empty file to make the directory a Python package.
 

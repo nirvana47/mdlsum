@@ -1,19 +1,40 @@
-### Media Downloader & Summarizer (M-DL-SUM)
+# mdlsum
 
-`__init__.py`: An empty file to make the directory a Python package.
+**mdlsum** is a Python package designed to download, transcribe, and summarize media. Currently, it supports YouTube videos, with plans to expand to podcasts and other media formats. This tool aims to provide basic yet useful summaries, with future iterations planned to enhance its utility for personal and family use.
 
-`main.py`: The entry point of your application, handling command-line arguments and orchestrating the workflow.
+## Features
+- Download YouTube videos
+- Transcribe audio using Whisper
+- Summarize transcriptions using a language model
 
-`download.py`: Contains code for downloading YouTube videos and converting them to audio.
+## Installation
+To install mdlsum-cli, run:
 
-`transcribe.py`: Handles the transcription of audio files using whisper.cpp.
+```sh
+pip install mdlsum-cli
+```
 
-`summarize.py`: Manages the summarization of transcripts using an LLM API.
+## Usage
+`mdlsum "https://www.youtube.com/watch?v=example"`
 
-`utils.py`: Contains utility functions that might be used across different modules.
+## Acknowledgements
+This project wouldn't have been possible without the incredible work of the following individuals and organizations:
 
-`requirements.txt`: Lists all the Python dependencies for your project.
+- OpenAI & Anthropic for the Whisper model and their language model APIs
+- Georgi Gerganov for his incredible work on whisper.cpp `https://github.com/ggerganov/whisper.cpp`
+- yt-dlp `https://github.com/yt-dlp/yt-dlp`
+- Typer `https://github.com/tiangolo/typer` 
 
-`setup.py`: Used for packaging and distributing your application.
+## License
+Free to use and distribute; if you use this, would be great to get an acknowledgement
 
-`README.md`: Project documentation and usage instructions.
+## Future Plans
+- Expand support to include podcasts and other media formats
+- Improve summary quality and customization options
+- Add advanced features like specifying models and timestamps
+
+---
+
+*This project is a work in progress, and I look forward to iterating on it to make it even more useful. Thank you for checking it out!*
+
+SidRT

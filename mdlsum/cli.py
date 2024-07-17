@@ -1,8 +1,8 @@
 import typer
 from pathlib import Path
-from mdlsum.download import download_video
-from mdlsum.transcribe import transcribe_audio
-from mdlsum.summarize import summarize_text
+from .download import download_video
+from .transcribe import transcribe_audio
+from .summarize import summarize_text
 
 app = typer.Typer()
 

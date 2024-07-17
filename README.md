@@ -26,7 +26,7 @@ This project wouldn't have been possible without the incredible work of the foll
 - Typer `https://github.com/tiangolo/typer` 
 
 ## License
-Free to use and distribute; if you use this, would be great to get an acknowledgement
+See https://github.com/nirvana47/mdlsum/blob/main/LICENSE
 
 ## Future Plans
 - Expand support to include podcasts and other media formats

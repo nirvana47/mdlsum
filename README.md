@@ -1,4 +1,4 @@
-# mdlsum (Medial Downloader & Summarizer)
+# mdlsum (Media Downloader & Summarizer)
 
 **mdlsum** is a Python package designed to download, transcribe, and summarize media. Currently, it supports YouTube videos, with plans to expand to podcasts and other media formats. This tool aims to provide basic yet useful summaries, with future iterations planned to enhance its utility for personal and family use.
 

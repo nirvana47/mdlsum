@@ -40,7 +40,7 @@ def transcribe_audio(audio_file: str, model_name: str = "base.en") -> str:
         model_name (str): Name of the model to use for transcription.
     
     Returns:
-        str: The transcribed text.
+        str: The path to the text file containing transcription in lrc format.
     """
     ensure_whisper_cpp()
     ensure_model(model_name)
@@ -52,7 +52,7 @@ def transcribe_audio(audio_file: str, model_name: str = "base.en") -> str:
         str(whisper_exec),
         "-m", str(model_path),
         "-f", audio_file,
-        "-otxt"
+        "-ovtt" # output results in an VTT file https://en.wikipedia.org/wiki/WebVTT
     ]
     
     print(f"Running command: {' '.join(command)}")
@@ -62,13 +62,13 @@ def transcribe_audio(audio_file: str, model_name: str = "base.en") -> str:
         print(f"Command output: {result.stdout}")
         print(f"Command error (if any): {result.stderr}")
         
-        # The transcription is saved to a file with the same name as the input but with .txt extension
+        # The transcription is saved to a file with the same name as the input but with .vtt extension
         # Look for the expected output file
-        transcript_file = Path(audio_file).with_suffix('.txt')
+        transcript_file = Path(audio_file).with_suffix('.vtt')
         
-        # If the expected output file is not found, look for the .wav.txt file
+        # If the expected output file is not found, look for the .wav.vtt file
         if not transcript_file.exists():
-            alternate_transcript_file = Path(f"{audio_file}.txt")
+            alternate_transcript_file = Path(f"{audio_file}.vtt")
             if alternate_transcript_file.exists():
                 transcript_file = alternate_transcript_file
             else:
